@@ -1,14 +1,7 @@
 package com.hakaneroztekin.glassdoorScraper;
 
-import java.math.BigDecimal;
-import java.net.URLEncoder;
-import java.util.List;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
-import com.gargoylesoftware.htmlunit.html.HtmlElement;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.jaunt.JauntException;
+import com.jaunt.UserAgent;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -21,43 +14,20 @@ public class GlassdoorScraper implements CommandLineRunner{
     }
 
     public static void main(String[] args) {
-        String searchQuery = "iphone 6s" ;
-        String baseUrl = "https://newyork.craigslist.org/" ;
-        WebClient client = new WebClient();
-        client.getOptions().setCssEnabled(false);
-        client.getOptions().setJavaScriptEnabled(false);
-        try {
-            String searchUrl = baseUrl + "search/sss?sort=rel&query=" + URLEncoder.encode(searchQuery, "UTF-8");
-            HtmlPage page = client.getPage(searchUrl);
 
-            List<HtmlElement> items = (List<HtmlElement>) page.getByXPath("//li[@class='result-row']") ;
-            if(items.isEmpty()){
-                System.out.println("No items found !");
-            }else{
-                for(HtmlElement htmlItem : items){
-                    HtmlAnchor itemAnchor = ((HtmlAnchor) htmlItem.getFirstByXPath(".//p[@class='result-info']/a"));
-                    HtmlElement spanPrice = ((HtmlElement) htmlItem.getFirstByXPath(".//a/span[@class='result-price']")) ;
+        try{
+            UserAgent userAgent = new UserAgent();                       //create new userAgent (headless browser).
+            userAgent.visit("https://www.glassdoor.com/Reviews/istanbul-reviews-SRCH_IL.0,8_IM1160.htm");                        //visit a url
+            //System.out.println(userAgent.doc.innerHTML());               //print the document as HTML
 
-                    // It is possible that an item doesn't have any price, we set the price to 0.0 in this case
-                    String itemPrice = spanPrice == null ? "0.0" : spanPrice.asText() ;
-
-                    Item item = new Item();
-                    item.setTitle(itemAnchor.asText());
-                    item.setUrl( baseUrl + itemAnchor.getHrefAttribute());
-
-                    item.setPrice(new BigDecimal(itemPrice.replace("$", "")));
+            String title = userAgent.doc.findFirst("<title>").getChildText(); //get child text of title element.
+            System.out.println("\nWebsite: " + title);    //print the title
 
 
-                    ObjectMapper mapper = new ObjectMapper();
-                    String jsonString = mapper.writeValueAsString(item) ;
-
-                    System.out.println(jsonString);
-                }
-            }
-        } catch(Exception e){
-            e.printStackTrace();
         }
-
+        catch(JauntException e){         //if an HTTP/connection error occurs, handle JauntException.
+            System.err.println(e);
+        }
     }
 
 }
