@@ -46,7 +46,8 @@ public class GlassdoorScraper implements CommandLineRunner{
 
             // So that we know the total # of the companies, so we can iterate till we reach that count
             while(parsedCompaniesCount <= totalCompanyCount){
-                URL = getNextURL(getPageNumber(parsedCompaniesCount));
+                //URL = getNextURL(getPageNumber(parsedCompaniesCount));
+                URL = "https://www.glassdoor.com/Reviews/istanbul-reviews-SRCH_IL.0,8_IM1160_IP37.htm";
                 userAgent.visit(URL);  //visit a url
                 totalCompaniesInThePage = scrapeCompanies(userAgent);
                 parsedCompaniesCount += totalCompaniesInThePage;
@@ -63,7 +64,6 @@ public class GlassdoorScraper implements CommandLineRunner{
     }
 
     public static Integer scrapeCompanies(UserAgent userAgent){
-
         Elements companiesHTML = userAgent.doc.findEach("<div class=\"eiHdrModule module snug \"");       //find non-nested tables
         //System.out.println("Found " + companiesHTML.size() + " companies in the page");
 
@@ -82,8 +82,8 @@ public class GlassdoorScraper implements CommandLineRunner{
             companyRate = titleAndRate[titleAndRate.length - 1]; // get rate. eg: 3.6
             companyTitle = titleAndRateString.toString().replace(companyRate, ""); // Extract the company name. eg: Yapi Kredi
 
-            newCompany.setTitle(titleAndRate[0]); // eg: Vodafone
-            newCompany.setTitle(titleAndRate[1]); // eg: 3.8
+            newCompany.setTitle(companyTitle); // eg: Vodafone
+            newCompany.setTitle(companyRate); // eg: 3.8
 
             //System.out.println(companyTitleAndRate);
             System.out.println("Name: " + companyTitle + " Rate: " + companyRate);
