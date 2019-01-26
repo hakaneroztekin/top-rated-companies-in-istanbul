@@ -7,8 +7,11 @@ import com.jaunt.UserAgent;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 @Component
@@ -29,12 +32,24 @@ public class GlassdoorScraper implements CommandLineRunner{
             String title = userAgent.doc.findFirst("<title>").getChildText(); //get child text of title element.
             System.out.println("\nWebsite: " + title);    //print the title
 
-            scrapeCompanies(userAgent);
+            //scrapeCompanies(userAgent); // scrape the first page
+
+            Element totalCompanyCountString = userAgent.doc.findFirst("<div class=\"count margBot floatLt tightBot\"");       // get total company count, currently it is 1,607
+            // totalCompanyCountString does not only hold the number of companies yet, so we need to extract the total company count.
+            String[] companyCountParts = totalCompanyCountString.getTextContent().split("\\s+"); // split title and rate.
+            Integer totalCompanyCount;
+            totalCompanyCount = NumberFormat.getNumberInstance(Locale.US).parse(companyCountParts[4]).intValue(); // used to convert comma string to int. 1,607 -> 1607
+            System.out.println(totalCompanyCount);
+
+            // So that we know the total # of the companies, so we can iterate till we reach that count
+            //userAgent.visit("https://www.glassdoor.com/Reviews/istanbul-reviews-SRCH_IL.0,8_IM1160.htm");                        //visit a url
 
 
         }
         catch(JauntException e){         //if an HTTP/connection error occurs, handle JauntException.
             System.err.println(e);
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
 
     }
