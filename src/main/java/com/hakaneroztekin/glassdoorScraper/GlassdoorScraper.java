@@ -16,6 +16,7 @@ import java.util.Locale;
 
 @Component
 public class GlassdoorScraper implements CommandLineRunner{
+    static List<Company> companies = new ArrayList<>();
 
     @Override
     public void run(String [] args) throws Exception{
@@ -64,9 +65,10 @@ public class GlassdoorScraper implements CommandLineRunner{
 
     public static Integer scrapeCompanies(UserAgent userAgent){
         Elements companiesHTML = userAgent.doc.findEach("<div class=\"eiHdrModule module snug \"");       //find non-nested tables
+        Integer companyCountInThePage = 0;
         //System.out.println("Found " + companiesHTML.size() + " companies in the page");
 
-        List<Company> companies = new ArrayList<>();
+        //List<Company> companies = new ArrayList<>();
 
         for(Element companyHTML : companiesHTML) {
             Company newCompany = new Company();
@@ -86,13 +88,13 @@ public class GlassdoorScraper implements CommandLineRunner{
 
             newCompany.setTitle(companyTitle); // eg: Vodafone
             newCompany.setTitle(companyRate); // eg: 3.8
-
+            companyCountInThePage++;
             //System.out.println(companyTitleAndRate);
-            System.out.println("Name: " + companyTitle + " Rate: " + companyRate);
+           // System.out.println("Name: " + companyTitle + " Rate: " + companyRate);
             companies.add(newCompany);
         }
 
-        return companies.size();
+        return companyCountInThePage;
     }
 
     public static String getNextURL(Integer pageNumber){
