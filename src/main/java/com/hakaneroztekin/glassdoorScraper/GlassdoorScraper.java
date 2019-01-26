@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 @Component
@@ -29,16 +30,19 @@ public class GlassdoorScraper implements CommandLineRunner{
             System.out.println("\nWebsite: " + title);    //print the title
 
             Elements companiesHTML = userAgent.doc.findEach("<div class=\"eiHdrModule module snug \"");       //find non-nested tables
-            System.out.println("Found " + companies.size() + " companies in the page");
+            System.out.println("Found " + companiesHTML.size() + " companies in the page");
 
-            ArrayList<Company> companies;
+            List<Company> companies = new ArrayList<>();
 
             for(Element companyHTML : companiesHTML){
                 Company newCompany = new Company();
                 String companyInfo = companyHTML.getTextContent(); // get company info in a string (a simple approach)
-                String[] parts = companyInfo.trim().split("\\d");
-                String companyTitle = parts[0];
+                String[] infoParts = companyInfo.trim().split("\\d");
+                String companyTitle = infoParts[0]; // get company title
+                newCompany.setTitle(companyTitle);
+                companies.add(newCompany);
 
+                System.out.println(newCompany.getTitle());
             }
 
         }
