@@ -37,11 +37,12 @@ public class GlassdoorScraper implements CommandLineRunner{
             for(Element companyHTML : companiesHTML){
                 Company newCompany = new Company();
                 String companyInfo = companyHTML.getTextContent(); // get company info in a string (a simple approach)
-                String[] infoParts = companyInfo.trim().split("\\d");
-                String companyTitle = infoParts[0]; // get company title
+                String[] titleSplit = companyInfo.trim().split("\\d");
+                String companyTitle = titleSplit[0]; // get company title
                 newCompany.setTitle(companyTitle);
-                companies.add(newCompany);
 
+
+                companies.add(newCompany);
                 System.out.println(newCompany.getTitle());
             }
 
