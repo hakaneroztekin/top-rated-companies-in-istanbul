@@ -36,14 +36,23 @@ public class GlassdoorScraper implements CommandLineRunner{
 
             for(Element companyHTML : companiesHTML){
                 Company newCompany = new Company();
+                String companyTitle, companyRate;
                 String companyInfo = companyHTML.getTextContent(); // get company info in a string (a simple approach)
-                String[] titleSplit = companyInfo.trim().split("\\d");
-                String companyTitle = titleSplit[0]; // get company title
-                newCompany.setTitle(companyTitle);
+                String[] splitInfo = companyInfo.trim().split("(Star)");
 
+                String companyTitleAndRate = splitInfo[0]; // get company title and rate. eg: Yapi Kredi 3.6
+                String[] titleAndRate = companyTitleAndRate.split("\\s+"); // split title and rate.
+                String titleAndRateString = String.join(" ", titleAndRate);
 
+                companyRate = titleAndRate[titleAndRate.length-1]; // get rate. eg: 3.6
+                companyTitle = titleAndRateString.toString().replace(companyRate, ""); // Extract the company name. eg: Yapi Kredi
+
+                newCompany.setTitle(titleAndRate[0]); // eg: Vodafone
+                newCompany.setTitle(titleAndRate[1]); // eg: 3.8
+
+                //System.out.println(companyTitleAndRate);
+                System.out.println("Name: " + companyTitle + " Rate: " + companyRate);
                 companies.add(newCompany);
-                System.out.println(newCompany.getTitle());
             }
 
         }
