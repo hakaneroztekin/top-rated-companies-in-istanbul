@@ -46,8 +46,7 @@ public class GlassdoorScraper implements CommandLineRunner{
 
             // So that we know the total # of the companies, so we can iterate till we reach that count
             while(parsedCompaniesCount <= totalCompanyCount){
-                //URL = getNextURL(getPageNumber(parsedCompaniesCount));
-                URL = "https://www.glassdoor.com/Reviews/istanbul-reviews-SRCH_IL.0,8_IM1160_IP37.htm";
+                URL = getNextURL(getPageNumber(parsedCompaniesCount));
                 userAgent.visit(URL);  //visit a url
                 totalCompaniesInThePage = scrapeCompanies(userAgent);
                 parsedCompaniesCount += totalCompaniesInThePage;
@@ -80,7 +79,10 @@ public class GlassdoorScraper implements CommandLineRunner{
             String titleAndRateString = String.join(" ", titleAndRate);
 
             companyRate = titleAndRate[titleAndRate.length - 1]; // get rate. eg: 3.6
-            companyTitle = titleAndRateString.toString().replace(companyRate, ""); // Extract the company name. eg: Yapi Kredi
+            companyTitle = titleAndRateString.replace(companyRate, ""); // Extract the company name. eg: Yapi Kredi
+
+            // check if company name is duplicated for the companies without a logo
+            companyTitle = duplicateCheck(companyTitle);
 
             newCompany.setTitle(companyTitle); // eg: Vodafone
             newCompany.setTitle(companyRate); // eg: 3.8
@@ -107,5 +109,18 @@ public class GlassdoorScraper implements CommandLineRunner{
         System.out.print("Page " + pageNumber + " ");
 
         return pageNumber;
+    }
+
+    // Glassdoor mixes company logo section with title section for companies without logo.
+    // For example, if company name is Amazon if it's logo is not added then title is catched like this: Amazon Logo Amazon
+    // So here we check for duplicate then extract the company name, i.e, Amazon
+    public static String duplicateCheck(String companyTitle){
+        Boolean isDuplicate = companyTitle.contains("Logo");
+        if(isDuplicate){
+            String [] splitCompanyTitle = companyTitle.split("(Logo)");
+            if(splitCompanyTitle[0].trim().equals(splitCompanyTitle[1].trim()))
+                return splitCompanyTitle[0];
+        }
+        return companyTitle;
     }
 }
