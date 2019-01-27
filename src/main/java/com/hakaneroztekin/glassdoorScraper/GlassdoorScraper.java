@@ -26,6 +26,7 @@ public class GlassdoorScraper implements CommandLineRunner {
 
         try {
             UserAgent userAgent = new UserAgent();                       //create new userAgent (headless browser).
+            userAgent.settings.responseTimeout = 10000; // set timeout
             String URL = "https://www.glassdoor.com/Reviews/istanbul-reviews-SRCH_IL.0,8_IM1160.htm";
             userAgent.visit(URL);                        //visit a url
             //System.out.println(userAgent.doc.innerHTML());               //print the document as HTML
