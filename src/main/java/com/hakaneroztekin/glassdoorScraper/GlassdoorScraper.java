@@ -88,20 +88,23 @@ public class GlassdoorScraper implements CommandLineRunner {
 
             companyRate = titleAndRate[titleAndRate.length - 1]; // get rate. eg: 3.8
             companyTitle = titleAndRateString.replace(companyRate, ""); // Extract the company name. eg: Vodafone
-
             // check if company name is duplicated for the companies without a logo
-            companyTitle = duplicateCheck(companyTitle);
 
-            newCompany.setTitle(companyTitle); // eg: Vodafone
             try {
                 // convert company rate string to integer and save it to the object variable
-                newCompany.setRate(NumberFormat.getNumberInstance(Locale.US).parse(companyRate).doubleValue());
+                if(companyRate.matches(".*\\d+.*")) // if the company (contains) a rate
+                    newCompany.setRate(NumberFormat.getNumberInstance(Locale.US).parse(companyRate).doubleValue());
+                else{ // if the company does not have a rate
+                    newCompany.setRate(0d);
+                    companyTitle = titleAndRateString; // so titleAndRateString contains the company title
+                }
                 // convert company review count string to integer and save it to the object variable
                 newCompany.setReviewCount(processAndConvertToDouble(companyReviewCount));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-
+            companyTitle = duplicateCheck(companyTitle);
+            newCompany.setTitle(companyTitle); // eg: Vodafone
             //System.out.println("Name: " + newCompany.getTitle() + " Rate: " + newCompany.getRate());
             companies.add(newCompany);
             companyCountInThePage++;
@@ -122,6 +125,9 @@ public class GlassdoorScraper implements CommandLineRunner {
     public static Integer getPageNumber(Integer i) {
         Integer pageNumber = (int) (i / 10);
         System.out.print("Page " + pageNumber + " ");
+        if(pageNumber == 153){
+            System.out.println("check");
+        }
         return pageNumber;
     }
 
@@ -140,9 +146,9 @@ public class GlassdoorScraper implements CommandLineRunner {
 
     public static void sortAllCompanies() {
         List<Company> sortedListWithDuplicates = companies;
-        Collections.sort(sortedListWithDuplicates); // sort company rates in ascending order
-        Collections.reverse(sortedListWithDuplicates); // reverse it to descending order
         companies = sortedListWithDuplicates.stream().distinct().collect(Collectors.toList()); // remove duplicates caused by sorting with Collections
+        Collections.sort(companies); // sort company rates in ascending order
+        Collections.reverse(companies); // reverse it to descending order
         System.out.println("Sorting is done");
     }
 
