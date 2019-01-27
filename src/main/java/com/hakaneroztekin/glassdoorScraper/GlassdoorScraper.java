@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 @Component
@@ -137,8 +138,10 @@ public class GlassdoorScraper implements CommandLineRunner {
     }
 
     public static void sortAllCompanies() {
-        Collections.sort(companies); // sort company rates in ascending order
-        Collections.reverse(companies); // reverse it to descending order
+        List<Company> sortedListWithDuplicates = companies;
+        Collections.sort(sortedListWithDuplicates); // sort company rates in ascending order
+        Collections.reverse(sortedListWithDuplicates); // reverse it to descending order
+        companies = sortedListWithDuplicates.stream().distinct().collect(Collectors.toList()); // remove duplicates caused by sorting with Collections
         System.out.println("Sorting is done");
     }
 
