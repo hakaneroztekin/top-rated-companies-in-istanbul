@@ -213,7 +213,7 @@ You can see below the top 100 companies with more than 20 reviews in Istanbul (2
 **[Ranked full list (top 690 in 1607 companies)](https://github.com/hakaneroztekin/glassdoor-scraper/blob/master/topCompaniesInIstanbul.txt)**
 
 # Language
-Developed with Java Spring.
+Developed in Java with Spring Framework. IntelliJ is used as IDE.
 
 # Developer
 **[@hakaneroztekin](https://github.com/hakaneroztekin)**
