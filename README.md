@@ -8,7 +8,7 @@ You can see below the top 100 companies with more than 20 reviews in Istanbul (2
 
 **Full list (690 companies): [topCompaniesInIstanbul.pdf](https://github.com/hakaneroztekin/glassdoor-scraper/blob/master/topCompaniesInIstanbul.pdf)**
 
-Title	Rate	Total Reviews
+**Title** /	**Rate** /	**Total Reviews**
 
 #1	DocPlanner 	4.9		64
 
