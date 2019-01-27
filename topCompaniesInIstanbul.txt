@@ -1,0 +1,691 @@
+##	Title	Rate	Total Reviews
+#1	DocPlanner 	4.9		64
+#2	Bain & Company 	4.8		2000
+#3	Blueground 	4.8		49
+#4	Madwire 	4.7		236
+#5	Hotel Power 	4.6		21
+#6	Syriansoft 	4.6		24
+#7	English Ninjas 	4.6		25
+#8	Azercell Telecom 	4.6		37
+#9	emarsys 	4.6		123
+#10	Bogazici University 	4.6		32
+#11	Yandex 	4.5		426
+#12	SAP 	4.5		9000
+#13	IAESTE 	4.4		22
+#14	OC&C Strategy Consultants 	4.4		87
+#15	NATO 	4.4		96
+#16	Adesso AG 	4.4		50
+#17	Google 	4.4		10000
+#18	Highwater Group 	4.3		21
+#19	Middle East Technical University 	4.3		45
+#20	DNB 	4.3		49
+#21	TU/e 	4.3		174
+#22	Ball State University 	4.3		279
+#23	LinkedIn 	4.3		2000
+#24	Toptal 	4.3		199
+#25	AIESEC 	4.3		863
+#26	Uber 	4.3		6000
+#27	McKinsey & Company 	4.3		3000
+#28	Boston Consulting Group 	4.3		2000
+#29	NueTech Marketing 	4.2		21
+#30	B&R Industrial Automation 	4.2		26
+#31	Khan Academy 	4.2		32
+#32	Global Travel International 	4.2		41
+#33	Forte Group 	4.2		44
+#34	Freelance 	4.2		165
+#35	Sony Music Entertainment 	4.2		493
+#36	Adobe 	4.2		3000
+#37	VMware 	4.2		4000
+#38	Cambly 	4.2		270
+#39	Hilti North America 	4.2		596
+#40	Daimler 	4.2		1000
+#41	Sabanc? University 	4.2		43
+#42	Nokia 	4.2		7000
+#43	World Wide Web Hosting 	4.1		41
+#44	DAF 	4.1		68
+#45	International House 	4.1		75
+#46	Covestro 	4.1		174
+#47	IEEE 	4.1		210
+#48	Rixos Hotels 	4.1		22
+#49	AVL 	4.1		112
+#50	Oliver Wyman 	4.1		620
+#51	Ritz-Carlton 	4.1		1000
+#52	A.T. Kearney 	4.1		834
+#53	Red Bull 	4.1		1000
+#54	Sony Electronics 	4.1		790
+#55	Trendyol 	4.1		26
+#56	Microsoft 	4.1		21000
+#57	The Social Element 	4.0		48
+#58	Rödl & Partner 	4.0		64
+#59	Saudi Arabian Airlines 	4.0		99
+#60	Husky Injection Molding Systems 	4.0		132
+#61	KLM 	4.0		164
+#62	Memorial Healthcare System - South Florida 	4.0		243
+#63	Audi 	4.0		463
+#64	Siemens PLM Software 	4.0		595
+#65	Boston Scientific 	4.0		1000
+#66	Eastman 	4.0		1000
+#67	HP Inc. 	4.0		1000
+#68	Pedersen & Partners 	4.0		29
+#69	TÜV NORD Group 	4.0		52
+#70	The Renoir Group 	4.0		141
+#71	Janssen 	4.0		445
+#72	Cisco Systems 	4.0		16000
+#73	FRHI Hotels & Resorts 	4.0		111
+#74	Johnson & Johnson 	4.0		4000
+#75	Hilton 	4.0		3000
+#76	Apple 	4.0		14000
+#77	LC Waikiki 	4.0		42
+#78	Istanbul Technical University 	4.0		39
+#79	Procter & Gamble 	4.0		6000
+#80	Siemens 	4.0		6000
+#81	Naspers 	3.9		31
+#82	TeliaSonera 	3.9		51
+#83	AVL North America 	3.9		80
+#84	Alstom Grid 	3.9		96
+#85	Centennial College 	3.9		119
+#86	Oriflame 	3.9		122
+#87	Aselsan 	3.9		159
+#88	Volvo Trucks 	3.9		431
+#89	BBC 	3.9		847
+#90	Rockwell Automation 	3.9		1000
+#91	BASF 	3.9		1000
+#92	Prometeia 	3.9		36
+#93	Le Meridien 	3.9		110
+#94	Riot Games 	3.9		579
+#95	Gartner 	3.9		2000
+#96	Texas Instruments 	3.9		2000
+#97	Hyatt 	3.9		2000
+#98	Tetra Pak 	3.9		417
+#99	Extreme Networks 	3.9		488
+#100	Mars 	3.9		1000
+#101	Cummins 	3.9		2000
+#102	NIKE 	3.9		4000
+#103	Tekfen Construction 	3.9		21
+#104	Japan Tobacco International 	3.9		419
+#105	UNDP 	3.9		497
+#106	Arup 	3.9		825
+#107	Robert Bosch 	3.9		3000
+#108	SOCAR 	3.9		59
+#109	Itelligence 	3.9		71
+#110	Ziraat Bank 	3.9		21
+#111	Roche 	3.9		2000
+#112	Mastercard 	3.9		1000
+#113	3M 	3.9		2000
+#114	TAV Airports 	3.9		36
+#115	Decathlon 	3.9		1000
+#116	BSH Hausgeräte 	3.9		201
+#117	Ford Motor Company 	3.9		3000
+#118	Schneider Electric 	3.9		4000
+#119	Türk Ekonomi Bankasi 	3.9		32
+#120	Pfizer 	3.9		3000
+#121	Isbank 	3.9		72
+#122	Unilever 	3.9		4000
+#123	Accenture 	3.9		40000
+#124	Milsoft Software Technologies 	3.8		36
+#125	Omya 	3.8		36
+#126	DEME 	3.8		58
+#127	Migros 	3.8		116
+#128	Catholic Relief Services 	3.8		201
+#129	Lafarge 	3.8		226
+#130	Strategy& 	3.8		389
+#131	UNICEF 	3.8		427
+#132	CNN 	3.8		507
+#133	Analog Devices 	3.8		682
+#134	Siemens Healthineers 	3.8		748
+#135	Arcadis 	3.8		989
+#136	Four Seasons 	3.8		1000
+#137	Diageo 	3.8		1000
+#138	U.S. Department of State 	3.8		1000
+#139	United Nations 	3.8		1000
+#140	Toyota North America 	3.8		1000
+#141	Whirlpool Corporation 	3.8		1000
+#142	Starwood Hotels & Resorts 	3.8		2000
+#143	Stryker 	3.8		2000
+#144	PayPal 	3.8		3000
+#145	Walt Disney Company 	3.8		3000
+#146	Capital One 	3.8		6000
+#147	Thomson Reuters 	3.8		7000
+#148	Dell 	3.8		12000
+#149	J.P. Morgan 	3.8		16000
+#150	Heidrick & Struggles 	3.8		258
+#151	PUMA 	3.8		576
+#152	AccorHotels 	3.8		688
+#153	Fairmont Hotels & Resorts 	3.8		689
+#154	AbbVie 	3.8		1000
+#155	DHL Express 	3.8		1000
+#156	Dow 	3.8		1000
+#157	Randstad 	3.8		2000
+#158	Starbucks 	3.8		20000
+#159	Amazon 	3.8		30000
+#160	METRO Cash & Carry 	3.8		243
+#161	EMC 	3.8		4000
+#162	Marriott International 	3.8		6000
+#163	AstraZeneca 	3.8		1000
+#164	adidas 	3.8		1000
+#165	IFC 	3.8		276
+#166	British American Tobacco 	3.8		1000
+#167	Bayer 	3.8		1000
+#168	Expedia Group 	3.8		2000
+#169	Shell 	3.8		4000
+#170	GlaxoSmithKline 	3.8		4000
+#171	Colgate-Palmolive 	3.8		1000
+#172	Henkel 	3.8		1000
+#173	Amadeus 	3.8		1000
+#174	Intel Corporation 	3.8		12000
+#175	ING 	3.8		1000
+#176	Philip Morris International 	3.8		971
+#177	Eczac?ba?? 	3.8		38
+#178	Insider 	3.8		56
+#179	KPMG 	3.8		15000
+#180	Deloitte 	3.8		27000
+#181	Garanti Bank 	3.8		94
+#182	Turkish Airlines 	3.8		145
+#183	Vodafone 	3.8		5000
+#184	Nexia International 	3.7		22
+#185	XTB 	3.7		37
+#186	Corning Cable Systems 	3.7		40
+#187	Gulf Oil 	3.7		54
+#188	SK Engineering & Constructions 	3.7		66
+#189	POSCO 	3.7		84
+#190	Queens College 	3.7		112
+#191	METRO 	3.7		117
+#192	White & Case 	3.7		172
+#193	Arkema 	3.7		181
+#194	TÜV SÜD 	3.7		225
+#195	Shangri-La Hotels and Resorts 	3.7		248
+#196	Mandarin Oriental Hotel Group 	3.7		274
+#197	Lufthansa 	3.7		302
+#198	Bausch + Lomb 	3.7		314
+#199	Yum! 	3.7		318
+#200	Pernod Ricard 	3.7		352
+#201	DePuy Synthes 	3.7		430
+#202	Twentieth Century Fox 	3.7		516
+#203	Michelin 	3.7		537
+#204	Mott MacDonald 	3.7		582
+#205	Mazars 	3.7		695
+#206	Microchip Technology 	3.7		705
+#207	ABC 	3.7		1000
+#208	AMD 	3.7		2000
+#209	Emerson 	3.7		2000
+#210	ExxonMobil 	3.7		2000
+#211	NetApp 	3.7		3000
+#212	Pfizer Limited 	3.7		97
+#213	Baker McKenzie 	3.7		354
+#214	Maersk Line 	3.7		754
+#215	Freelancer 	3.7		829
+#216	TOTAL 	3.7		1000
+#217	Bristol-Myers Squibb 	3.7		1000
+#218	InterContinental Hotels Group 	3.7		1000
+#219	CA Technologies 	3.7		3000
+#220	Bloomberg L.P. 	3.7		3000
+#221	ITE Group 	3.7		52
+#222	Atlas Copco 	3.7		430
+#223	Honda 	3.7		516
+#224	Novo Nordisk 	3.7		875
+#225	Hilti Group 	3.7		560
+#226	eBay 	3.7		2000
+#227	Merck 	3.7		3000
+#228	Nestlé 	3.7		2000
+#229	L&#039;Oréal 	3.7		3000
+#230	Novartis 	3.7		2000
+#231	Hepsiburada.com 	3.7		28
+#232	Mercedes-Benz International 	3.7		530
+#233	EY 	3.7		21000
+#234	Garanti Technology 	3.7		114
+#235	PwC 	3.7		21000
+#236	Fichtner 	3.6		22
+#237	EMIS 	3.6		33
+#238	Council of Europe 	3.6		37
+#239	Watsons 	3.6		38
+#240	Swissotel Hotels & Resorts 	3.6		46
+#241	Emerson Climate Technologies 	3.6		51
+#242	AgilOne 	3.6		51
+#243	V.Group 	3.6		56
+#244	Kingspan 	3.6		63
+#245	JACOBS DOUWE EGBERTS 	3.6		68
+#246	Dialog Semiconductor 	3.6		80
+#247	BSH Home Appliances USA 	3.6		96
+#248	Crown Holdings 	3.6		134
+#249	Sony Mobile Communications 	3.6		164
+#250	Barry Callebaut 	3.6		173
+#251	Alstom Transportation 	3.6		225
+#252	Bosch Rexroth 	3.6		233
+#253	BCD Travel 	3.6		286
+#254	Chemonics International 	3.6		288
+#255	Sandvik 	3.6		362
+#256	Abbott 	3.6		394
+#257	Softtek 	3.6		411
+#258	Deutsche Telekom 	3.6		438
+#259	Rabobank 	3.6		454
+#260	Merck KGaA 	3.6		476
+#261	Equinix 	3.6		502
+#262	Hasbro 	3.6		528
+#263	Norwegian Cruise Line 	3.6		534
+#264	Build-A-Bear 	3.6		583
+#265	Leo Burnett 	3.6		637
+#266	Corning 	3.6		715
+#267	Doubletree By Hilton 	3.6		717
+#268	Renault 	3.6		758
+#269	Crédit Agricole 	3.6		785
+#270	Royal Caribbean Cruises 	3.6		904
+#271	TIBCO Software 	3.6		1000
+#272	Levi Strauss 	3.6		1000
+#273	Amgen 	3.6		1000
+#274	Cigna 	3.6		2000
+#275	Cargill 	3.6		2000
+#276	Citrix 	3.6		2000
+#277	UBS 	3.6		4000
+#278	Gap 	3.6		4000
+#279	Global Business Reports 	3.6		21
+#280	Miele 	3.6		80
+#281	W Hotels 	3.6		171
+#282	Toyota Motor Corporation 	3.6		606
+#283	AXA 	3.6		1000
+#284	Experian 	3.6		1000
+#285	Medtronic 	3.6		3000
+#286	Mimosa Networks 	3.6		43
+#287	OMV 	3.6		137
+#288	H&M 	3.6		4000
+#289	JLL 	3.6		2000
+#290	DuPont 	3.6		1000
+#291	Groupon 	3.6		2000
+#292	Sanofi 	3.6		3000
+#293	Enka 	3.6		44
+#294	Danone 	3.6		813
+#295	Mindshare 	3.6		700
+#296	PageGroup 	3.6		1000
+#297	Allianz 	3.6		1000
+#298	GE Healthcare 	3.6		2000
+#299	GE Aviation 	3.6		1000
+#300	ABB 	3.6		2000
+#301	DenizBank 	3.6		26
+#302	Nielsen 	3.6		4000
+#303	Finansbank 	3.6		29
+#304	XYZ (Turkey) 	3.6		452
+#305	GE 	3.6		8000
+#306	Intertech (Turkey) 	3.6		33
+#307	The Coca-Cola Company 	3.6		4000
+#308	Sony 	3.6		1000
+#309	Alcatel-Lucent 	3.6		2000
+#310	HSBC Holdings 	3.6		9000
+#311	IBM 	3.6		42000
+#312	Yapi Kredi 	3.6		86
+#313	Groupe Atlantic 	3.5		21
+#314	Vaillant 	3.5		23
+#315	Palfinger 	3.5		27
+#316	Bizerba 	3.5		27
+#317	Media-Saturn Group 	3.5		28
+#318	Primetals Technologies 	3.5		37
+#319	Streetbees 	3.5		50
+#320	Sociomantic Labs 	3.5		53
+#321	GA Telesis 	3.5		55
+#322	TP Vision 	3.5		67
+#323	Allianz Insurance 	3.5		74
+#324	Dole Food 	3.5		83
+#325	Actelion Group 	3.5		90
+#326	LUKOIL 	3.5		93
+#327	itelligence North America 	3.5		94
+#328	Ministry of Education 	3.5		109
+#329	Business Integration Partners 	3.5		125
+#330	Cohn & Wolfe 	3.5		152
+#331	Videojet Technologies 	3.5		153
+#332	MAHLE International 	3.5		205
+#333	MediaCom 	3.5		219
+#334	FMC 	3.5		240
+#335	Associated Press 	3.5		245
+#336	Huntsman Corp 	3.5		264
+#337	Lee Hecht Harrison 	3.5		268
+#338	Perrigo 	3.5		273
+#339	MWH Global 	3.5		305
+#340	Teleflex 	3.5		314
+#341	TBWA Worldwide 	3.5		332
+#342	Crowne Plaza Hotels & Resorts 	3.5		372
+#343	McCann Worldgroup 	3.5		410
+#344	TUI Group 	3.5		454
+#345	Unify 	3.5		483
+#346	Chanel 	3.5		487
+#347	UBM 	3.5		518
+#348	Wunderman 	3.5		558
+#349	ZF Group 	3.5		577
+#350	Sheraton 	3.5		693
+#351	Alcon 	3.5		875
+#352	Cyient 	3.5		1000
+#353	HERE Technologies 	3.5		1000
+#354	EF Education First 	3.5		1000
+#355	Boeing 	3.5		7000
+#356	Freudenberg 	3.5		131
+#357	Mitsubishi Electric 	3.5		154
+#358	EBRD 	3.5		207
+#359	Deutsche Post DHL 	3.5		471
+#360	Vestas Wind Systems 	3.5		537
+#361	Zomato 	3.5		576
+#362	T-Systems 	3.5		710
+#363	Allergan 	3.5		1000
+#364	Abbott Labs 	3.5		1000
+#365	Marks & Spencer 	3.5		2000
+#366	Symantec 	3.5		3000
+#367	Seven Bridges 	3.5		36
+#368	Técnicas Reunidas 	3.5		82
+#369	Pirelli 	3.5		129
+#370	Foreign and Commonwealth Office 	3.5		193
+#371	GroupM 	3.5		457
+#372	Marsh 	3.5		633
+#373	FEV 	3.5		143
+#374	Panasonic 	3.5		951
+#375	Qatar National Bank 	3.5		110
+#376	Radisson Hotel Group 	3.5		899
+#377	Philips 	3.5		4000
+#378	Nortel Networks 	3.5		596
+#379	OBSS 	3.5		26
+#380	Hewlett Packard Enterprise | HPE 	3.5		8000
+#381	Sahibinden 	3.5		23
+#382	IQVIA 	3.5		3000
+#383	Citi 	3.5		14000
+#384	Samsung Electronics 	3.5		3000
+#385	PeakGames 	3.5		29
+#386	Arçelik 	3.5		97
+#387	Netas 	3.5		105
+#388	Médecins du Monde 	3.4		24
+#389	Castrol 	3.4		34
+#390	Oxford Business Group 	3.4		50
+#391	Celfocus 	3.4		52
+#392	Odgers Berndtson 	3.4		58
+#393	Bunge Limited 	3.4		83
+#394	Astellas 	3.4		87
+#395	SCHOTT 	3.4		105
+#396	University of Liverpool 	3.4		132
+#397	Delivery Hero 	3.4		139
+#398	CarTrawler 	3.4		142
+#399	Euler Hermes 	3.4		150
+#400	Zirtual 	3.4		151
+#401	Schindler 	3.4		161
+#402	Samsung C&T 	3.4		178
+#403	W. R. Grace & Co. 	3.4		195
+#404	OgilvyOne 	3.4		203
+#405	Fresenius Kabi 	3.4		204
+#406	Kofax 	3.4		223
+#407	Li & Fung 	3.4		224
+#408	CMA CGM 	3.4		263
+#409	bioMérieux 	3.4		277
+#410	AREVA 	3.4		380
+#411	PSA Peugeot Citroen 	3.4		417
+#412	Lendlease 	3.4		445
+#413	Cypress Semiconductor 	3.4		524
+#414	Swarovski 	3.4		622
+#415	PRA Health Sciences 	3.4		787
+#416	WSP 	3.4		821
+#417	International Paper 	3.4		825
+#418	Air Liquide 	3.4		862
+#419	Discovery, Inc. 	3.4		993
+#420	Crate and Barrel 	3.4		1000
+#421	Ogilvy 	3.4		1000
+#422	Ecolab 	3.4		1000
+#423	Tesla 	3.4		2000
+#424	Aon 	3.4		2000
+#425	Willis Towers Watson 	3.4		2000
+#426	BNP Paribas 	3.4		3000
+#427	Domino&#039;s 	3.4		4000
+#428	Victoria&#039;s Secret 	3.4		5000
+#429	Infosys 	3.4		31000
+#430	Air France-KLM 	3.4		106
+#431	Soho House 	3.4		133
+#432	Veeam Software 	3.4		317
+#433	MH Alshaya 	3.4		345
+#434	CHEP 	3.4		355
+#435	UL 	3.4		642
+#436	Marsh & McLennan Companies 	3.4		718
+#437	GE Power 	3.4		946
+#438	Eaton 	3.4		2000
+#439	UPS 	3.4		12000
+#440	Greenpeace 	3.4		304
+#441	Carrefour 	3.4		784
+#442	Sandoz International 	3.4		359
+#443	Lenovo 	3.4		1000
+#444	Deutsche Bank 	3.4		4000
+#445	Hyundai 	3.4		512
+#446	Asseco Group 	3.4		55
+#447	Havelsan 	3.4		71
+#448	Rocket Internet 	3.4		443
+#449	Honeywell 	3.4		6000
+#450	Wall Street English 	3.4		367
+#451	Aviva 	3.4		695
+#452	Mondelez International 	3.4		1000
+#453	The Oil & Gas Year 	3.4		25
+#454	BP 	3.4		3000
+#455	PepsiCo 	3.4		7000
+#456	NMQ Digital 	3.4		28
+#457	Kocsistem 	3.4		44
+#458	Koc University 	3.4		42
+#459	Oracle 	3.4		21000
+#460	Ericsson-Worldwide 	3.4		8000
+#461	Ford Otosan 	3.4		100
+#462	Huawei Technologies 	3.4		4000
+#463	Turkcell 	3.4		315
+#464	Tricon Energy 	3.3		21
+#465	YKK 	3.3		53
+#466	MTU 	3.3		56
+#467	Nutricia 	3.3		66
+#468	Samsonite 	3.3		103
+#469	KidZania 	3.3		112
+#470	Opel Automobile 	3.3		116
+#471	BNP Paribas Fortis 	3.3		137
+#472	Ptcl 	3.3		150
+#473	Brother Industries 	3.3		153
+#474	Bosch Security 	3.3		166
+#475	Hill International 	3.3		173
+#476	ST Ericsson - Global 	3.3		187
+#477	Würth 	3.3		231
+#478	Carat 	3.3		379
+#479	DDB 	3.3		467
+#480	R/GA 	3.3		468
+#481	Bureau Veritas 	3.3		488
+#482	SABIC 	3.3		622
+#483	Zurich Insurance Group 	3.3		629
+#484	DHL Global Forwarding 	3.3		664
+#485	Maxim Integrated 	3.3		809
+#486	Stantec 	3.3		873
+#487	Lexmark International 	3.3		895
+#488	Dun & Bradstreet 	3.3		953
+#489	Riverbed Technology 	3.3		999
+#490	Tiffany & Co. 	3.3		1000
+#491	BlackBerry 	3.3		2000
+#492	MetLife 	3.3		3000
+#493	Turkish Aerospace Industries 	3.3		83
+#494	Darty 	3.3		102
+#495	APCO Worldwide 	3.3		205
+#496	Autoliv 	3.3		386
+#497	Canon 	3.3		408
+#498	Electrolux 	3.3		667
+#499	Avery Dennison 	3.3		747
+#500	The Linde Group 	3.3		765
+#501	Covidien 	3.3		891
+#502	Teleperformance 	3.3		5000
+#503	McDonald&#039;s 	3.3		21000
+#504	Sika 	3.3		122
+#505	Media Markt 	3.3		165
+#506	Ferrero 	3.3		345
+#507	iProspect 	3.3		376
+#508	ZTE 	3.3		518
+#509	IKEA 	3.3		3000
+#510	Comodo 	3.3		290
+#511	Akzo Nobel Worldwide 	3.3		781
+#512	Amec Foster Wheeler 	3.3		1000
+#513	Goodyear 	3.3		965
+#514	DHL Supply Chain 	3.3		1000
+#515	Innova (Turkey) 	3.3		35
+#516	Cybersoft 	3.3		26
+#517	Ipsos 	3.3		1000
+#518	RB 	3.3		1000
+#519	Borsa ?stanbul 	3.3		21
+#520	MetGlobal 	3.3		24
+#521	SHV Energy 	3.2		29
+#522	World Trade Centers Association 	3.2		30
+#523	Credit Europe Bank 	3.2		33
+#524	Mahle Filter Systems 	3.2		35
+#525	ENIL 	3.2		38
+#526	Ethica Health & Retirement Communities 	3.2		40
+#527	Zyxel Communications 	3.2		43
+#528	Tod&#039;s 	3.2		48
+#529	ESKO 	3.2		57
+#530	OHL 	3.2		83
+#531	Epson 	3.2		124
+#532	Heraeus 	3.2		130
+#533	Renaissance Hotels 	3.2		201
+#534	Amphenol 	3.2		203
+#535	Agiliti 	3.2		248
+#536	Hitachi Vantara 	3.2		263
+#537	Ashland 	3.2		296
+#538	Kennametal 	3.2		300
+#539	DLA Piper 	3.2		301
+#540	Generali Group 	3.2		328
+#541	Fresenius Medical Care 	3.2		431
+#542	Industrial and Commercial Bank of China 	3.2		447
+#543	Parsons Brinckerhoff 	3.2		450
+#544	ZF TRW 	3.2		518
+#545	J. Walter Thompson Worldwide 	3.2		590
+#546	ENGIE 	3.2		614
+#547	Tech Data 	3.2		638
+#548	FICO 	3.2		667
+#549	Expeditors 	3.2		896
+#550	NTT DATA 	3.2		3000
+#551	AECOM 	3.2		4000
+#552	Faber-Castell 	3.2		24
+#553	TPAO 	3.2		32
+#554	Creative Associates International 	3.2		68
+#555	REHAU 	3.2		120
+#556	International Flavors & Fragrances 	3.2		225
+#557	Affinion Group 	3.2		311
+#558	TNS Global 	3.2		420
+#559	ASUS 	3.2		451
+#560	Teradata 	3.2		1000
+#561	FCA Fiat Chrysler Automobiles 	3.2		2000
+#562	Fujitsu 	3.2		2000
+#563	Vaillant Group 	3.2		21
+#564	TNT Express 	3.2		284
+#565	Philips Lighting 	3.2		528
+#566	Wipro 	3.2		18000
+#567	Mattel 	3.2		746
+#568	Avon 	3.2		1000
+#569	Grey Group 	3.2		474
+#570	Millward Brown 	3.2		639
+#571	LG Electronics 	3.2		1000
+#572	Atos 	3.2		4000
+#573	VakifBank 	3.2		23
+#574	Enerjisa 	3.2		29
+#575	Tubitak Bilgem 	3.2		50
+#576	Akbank 	3.2		75
+#577	Turk Telekom 	3.2		148
+#578	Esselte 	3.1		22
+#579	BNP Paribas Lease Group 	3.1		28
+#580	Camfil Group 	3.1		39
+#581	BIS 	3.1		49
+#582	SNF Group 	3.1		61
+#583	Greif 	3.1		70
+#584	Brasil Foods 	3.1		71
+#585	MVM 	3.1		87
+#586	VA Tech Wabag 	3.1		92
+#587	Legrand 	3.1		133
+#588	BENTELER Group 	3.1		145
+#589	WPP 	3.1		168
+#590	NBN Co 	3.1		208
+#591	GE Energy Connections 	3.1		220
+#592	Hill+Knowlton Strategies 	3.1		304
+#593	Leonardo 	3.1		320
+#594	Starcom MediaVest Group 	3.1		323
+#595	Danaher 	3.1		326
+#596	Panasonic Avionics Corporation 	3.1		404
+#597	MUFG 	3.1		411
+#598	Sealed Air Corporation 	3.1		495
+#599	Gilead Sciences 	3.1		776
+#600	British Airways 	3.1		824
+#601	Monster Worldwide 	3.1		962
+#602	PPG 	3.1		976
+#603	DSW 	3.1		2000
+#604	Zara 	3.1		2000
+#605	Staples 	3.1		7000
+#606	Nilfisk 	3.1		73
+#607	Nexans 	3.1		84
+#608	Inditex 	3.1		296
+#609	ArcelorMittal 	3.1		376
+#610	Smith & Nephew 	3.1		608
+#611	Coca-Cola Bottling Co. Consolidated 	3.1		611
+#612	CNH Industrial 	3.1		742
+#613	SGS 	3.1		826
+#614	Kraft Heinz Company 	3.1		3000
+#615	OMD 	3.1		627
+#616	SDL 	3.1		630
+#617	Korn Ferry 	3.1		952
+#618	Booking.com 	3.1		2000
+#619	NCR 	3.1		2000
+#620	Appen 	3.1		1000
+#621	Johnson Controls 	3.1		2000
+#622	AIG 	3.1		3000
+#623	Coca-Cola ?çecek 	3.1		25
+#624	Sisecam 	3.1		24
+#625	New Museum of Contemporary Art 	3.0		21
+#626	Global Load Control 	3.0		25
+#627	Argento SC 	3.0		34
+#628	RCI Bank and Services 	3.0		35
+#629	ADB 	3.0		35
+#630	Orga Systems 	3.0		38
+#631	real Hypermarket 	3.0		38
+#632	ICLP 	3.0		41
+#633	Nordex 	3.0		53
+#634	Pull and Bear 	3.0		55
+#635	NBN Group 	3.0		75
+#636	IE Singapore 	3.0		76
+#637	Hyundai Glovis 	3.0		78
+#638	MANN+HUMMEL 	3.0		113
+#639	PRIME Research 	3.0		122
+#640	Bridgestone Global 	3.0		142
+#641	Vertiv Co 	3.0		149
+#642	TÜV Rheinland 	3.0		157
+#643	Cochlear 	3.0		180
+#644	Dentons 	3.0		183
+#645	McCann Erickson 	3.0		190
+#646	Clear Channel Outdoor 	3.0		207
+#647	SPX 	3.0		252
+#648	Sumitomo Corporation 	3.0		253
+#649	Panalpina 	3.0		284
+#650	Elekta 	3.0		286
+#651	Daiichi Sankyo 	3.0		315
+#652	Travelex 	3.0		439
+#653	Univar 	3.0		480
+#654	Havas Worldwide 	3.0		492
+#655	INC Research 	3.0		498
+#656	DB Schenker 	3.0		695
+#657	Société Générale 	3.0		2000
+#658	Dentsu Aegis Network 	3.0		296
+#659	C&A 	3.0		171
+#660	GfK 	3.0		731
+#661	Yupana 	2.9		30
+#662	Blippar 	2.9		76
+#663	Triumph 	2.9		80
+#664	Telecom Italia 	2.9		81
+#665	Ageas 	2.9		108
+#666	Fjordnet 	2.9		115
+#667	Checkpoint Systems 	2.9		118
+#668	Imperial Tobacco 	2.9		161
+#669	Ingenico Group 	2.9		162
+#670	Brenntag 	2.9		163
+#671	BDP International 	2.9		178
+#672	Hogarth Worldwide 	2.9		186
+#673	Forcepoint 	2.9		204
+#674	LSG Sky Chefs 	2.9		277
+#675	United Technologies Climate, Controls & Security 	2.9		337
+#676	GP Strategies 	2.9		359
+#677	GKN 	2.9		482
+#678	CEVA Logistics 	2.9		789
+#679	Ricoh 	2.9		888
+#680	Securitas 	2.9		1000
+#681	G4S 	2.9		1000
+#682	BT 	2.9		2000
+#683	Convergys 	2.9		5000
+#684	Fox Networks Group 	2.9		80
+#685	GE Digital 	2.9		587
+#686	Emaar Properties 	2.9		117
+#687	Arvato 	2.9		917
+#688	pladis Global 	2.9		73
+#689	The Business Year 	2.9		44
+#690	VeriPark 	2.9		72
