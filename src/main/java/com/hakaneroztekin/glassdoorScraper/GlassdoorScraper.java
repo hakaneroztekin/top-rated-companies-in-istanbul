@@ -70,10 +70,13 @@ public class GlassdoorScraper implements CommandLineRunner {
 
         for (Element companyHTML : companiesHTML) {
             Company newCompany = new Company();
-            String companyTitle, companyRate;
+            String companyTitle, companyRate, companyReviewCount;
             String companyInfo = companyHTML.getTextContent(); // get company info in a string (a simple approach)
             String[] splitInfo = companyInfo.trim().split("(Star)");
+            String[] splitForReviews_firstStep = companyInfo.trim().split("(friend)\\s+");
+            String[] splitForReviews_secondStep = splitForReviews_firstStep[1].split("\\s+");
 
+            companyReviewCount = splitForReviews_secondStep[0]; // get company title and rate. eg: Vodafone 3.8
             String companyTitleAndRate = splitInfo[0]; // get company title and rate. eg: Vodafone 3.8
             String[] titleAndRate = companyTitleAndRate.split("\\s+"); // split title and rate.
             String titleAndRateString = String.join(" ", titleAndRate);
@@ -85,16 +88,18 @@ public class GlassdoorScraper implements CommandLineRunner {
             companyTitle = duplicateCheck(companyTitle);
 
             newCompany.setTitle(companyTitle); // eg: Vodafone
-            try {  // convert company rate string to integer and save it to the object variable
+            try {
+                // convert company rate string to integer and save it to the object variable
                 newCompany.setRate(NumberFormat.getNumberInstance(Locale.US).parse(companyRate).doubleValue());
+                // convert company review count string to integer and save it to the object variable
+                newCompany.setReviewCount(processAndConvertToDouble(companyReviewCount));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
+
             //System.out.println("Name: " + newCompany.getTitle() + " Rate: " + newCompany.getRate());
             companies.add(newCompany);
             companyCountInThePage++;
-            //System.out.println(companyTitleAndRate);
-            // System.out.println("Name: " + companyTitle + " Rate: " + companyRate);
         }
 
         return companyCountInThePage;
@@ -135,4 +140,19 @@ public class GlassdoorScraper implements CommandLineRunner {
         System.out.println(companies);
     }
 
+    public static Double processAndConvertToDouble(String s){
+        // Reviews more than a thousand is notated as "k" in Glasdoor. So we also need to convert it to thousand.
+        double s_double = 0d; // initialize
+        try { // First, convert to a double
+            s_double = NumberFormat.getNumberInstance(Locale.US).parse(s).doubleValue(); // s = 7.2k -> s_double = 7.2
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        //
+        if(s.contains("k")){
+            s_double *= 1000; // s_double = 7200
+        }
+
+        return s_double;
+    }
 }
