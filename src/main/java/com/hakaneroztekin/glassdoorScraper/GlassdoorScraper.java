@@ -77,7 +77,7 @@ public class GlassdoorScraper implements CommandLineRunner {
             Company newCompany = new Company();
             String companyTitle, companyRate, companyReviewCount;
             String companyInfo = companyHTML.getTextContent(); // get company info in a string (a simple approach)
-            String[] splitInfo = companyInfo.trim().split("(Star)");
+            String[] splitInfo = companyInfo.trim().split("(StarStar)");
             String[] splitForReviews_firstStep = companyInfo.trim().split("(friend)\\s+");
             String[] splitForReviews_secondStep = splitForReviews_firstStep[1].split("\\s+");
 
