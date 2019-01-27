@@ -6,7 +6,7 @@ Glasdoor is a great source to learn about the companies. Though, it does not sor
 # Results
 You can see below the top 100 companies with more than 20 reviews in Istanbul (27 January 2019)
 
-**[Click here for the full list (690 companies)](https://github.com/hakaneroztekin/glassdoor-scraper/blob/master/topCompaniesInIstanbul.txt)**
+**[Ranked full list (top 690 in 1607 companies)](https://github.com/hakaneroztekin/glassdoor-scraper/blob/master/topCompaniesInIstanbul.txt)**
 
 \#  **Title** /	**Rate** /	**Total Reviews**
 
@@ -210,4 +210,4 @@ You can see below the top 100 companies with more than 20 reviews in Istanbul (2
 
 #100	Mars 	3.9		1000
 
-**[Click here for the full list (690 companies)](https://github.com/hakaneroztekin/glassdoor-scraper/blob/master/topCompaniesInIstanbul.txt)**
+**[Ranked full list (top 690 in 1607 companies)](https://github.com/hakaneroztekin/glassdoor-scraper/blob/master/topCompaniesInIstanbul.txt)**
