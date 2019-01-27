@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class Company implements Comparable<Company> {
     String title;
     Double rate;
-    Double reviewCount;
+    Integer reviewCount;
 
     @Override
     public int compareTo(Company otherCompany) {

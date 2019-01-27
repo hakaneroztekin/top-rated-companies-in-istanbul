@@ -142,20 +142,20 @@ public class GlassdoorScraper implements CommandLineRunner {
         System.out.println("Sorting is done");
     }
 
-    public static Double processAndConvertToDouble(String s){
+    public static Integer processAndConvertToDouble(String s){
         // Reviews more than a thousand is notated as "k" in Glasdoor. So we also need to convert it to thousand.
-        double s_double = 0d; // initialize
+        int s_int = 0; // initialize
         try { // First, convert to a double
-            s_double = NumberFormat.getNumberInstance(Locale.US).parse(s).doubleValue(); // s = 7.2k -> s_double = 7.2
+            s_int = NumberFormat.getNumberInstance(Locale.US).parse(s).intValue(); // s = 7.2k -> s_double = 7.2
         } catch (ParseException e) {
             e.printStackTrace();
         }
         //
         if(s.contains("k")){
-            s_double *= 1000; // s_double = 7200
+            s_int *= 1000; // s_double = 7200
         }
 
-        return s_double;
+        return s_int;
     }
 
     public static void filterAndPrint(){
@@ -166,7 +166,7 @@ public class GlassdoorScraper implements CommandLineRunner {
         for(Company company : companies){
             if(company.getRate() >= 2.9 && company.getReviewCount() > 20){
 
-                System.out.println("#" + counter + "\t" + company.getTitle() + "\t" + company.getRate() + "\t\t" + company.getReviewCount() + "\n");
+                System.out.println("#" + counter + "\t" + company.getTitle() + "\t" + company.getRate() + "\t\t" + company.getReviewCount());
                 counter++;
             }
         }
