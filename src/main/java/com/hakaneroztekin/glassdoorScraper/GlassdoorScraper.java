@@ -9,23 +9,21 @@ import org.springframework.stereotype.Component;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 
 @Component
-public class GlassdoorScraper implements CommandLineRunner{
+public class GlassdoorScraper implements CommandLineRunner {
     static List<Company> companies = new ArrayList<>();
 
     @Override
-    public void run(String [] args) throws Exception{
+    public void run(String[] args) throws Exception {
         main(args);
     }
 
     public static void main(String[] args) {
 
-        try{
+        try {
             UserAgent userAgent = new UserAgent();                       //create new userAgent (headless browser).
             String URL = "https://www.glassdoor.com/Reviews/istanbul-reviews-SRCH_IL.0,8_IM1160.htm";
             userAgent.visit(URL);                        //visit a url
@@ -46,16 +44,16 @@ public class GlassdoorScraper implements CommandLineRunner{
             //System.out.println(totalCompanyCount);
 
             // So that we know the total # of the companies, so we can iterate till we reach that count
-            while(parsedCompaniesCount <= totalCompanyCount){
+            while (parsedCompaniesCount <= 30) {
                 URL = getNextURL(getPageNumber(parsedCompaniesCount));
                 userAgent.visit(URL);  //visit a url
                 totalCompaniesInThePage = scrapeCompanies(userAgent);
                 parsedCompaniesCount += totalCompaniesInThePage;
                 System.out.print("Completed!\n");
             }
-
-        }
-        catch(JauntException e){         //if an HTTP/connection error occurs, handle JauntException.
+            System.out.println("Scraping completed. Now companies will be sorted");
+            sortAllCompanies();
+        } catch (JauntException e) {         //if an HTTP/connection error occurs, handle JauntException.
             System.err.println(e);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -63,41 +61,46 @@ public class GlassdoorScraper implements CommandLineRunner{
 
     }
 
-    public static Integer scrapeCompanies(UserAgent userAgent){
+    public static Integer scrapeCompanies(UserAgent userAgent) {
         Elements companiesHTML = userAgent.doc.findEach("<div class=\"eiHdrModule module snug \"");       //find non-nested tables
         Integer companyCountInThePage = 0;
         //System.out.println("Found " + companiesHTML.size() + " companies in the page");
 
         //List<Company> companies = new ArrayList<>();
 
-        for(Element companyHTML : companiesHTML) {
+        for (Element companyHTML : companiesHTML) {
             Company newCompany = new Company();
             String companyTitle, companyRate;
             String companyInfo = companyHTML.getTextContent(); // get company info in a string (a simple approach)
             String[] splitInfo = companyInfo.trim().split("(Star)");
 
-            String companyTitleAndRate = splitInfo[0]; // get company title and rate. eg: Yapi Kredi 3.6
+            String companyTitleAndRate = splitInfo[0]; // get company title and rate. eg: Vodafone 3.8
             String[] titleAndRate = companyTitleAndRate.split("\\s+"); // split title and rate.
             String titleAndRateString = String.join(" ", titleAndRate);
 
-            companyRate = titleAndRate[titleAndRate.length - 1]; // get rate. eg: 3.6
-            companyTitle = titleAndRateString.replace(companyRate, ""); // Extract the company name. eg: Yapi Kredi
+            companyRate = titleAndRate[titleAndRate.length - 1]; // get rate. eg: 3.8
+            companyTitle = titleAndRateString.replace(companyRate, ""); // Extract the company name. eg: Vodafone
 
             // check if company name is duplicated for the companies without a logo
             companyTitle = duplicateCheck(companyTitle);
 
             newCompany.setTitle(companyTitle); // eg: Vodafone
-            newCompany.setTitle(companyRate); // eg: 3.8
+            try {  // convert company rate string to integer and save it to the object variable
+                newCompany.setRate(NumberFormat.getNumberInstance(Locale.US).parse(companyRate).doubleValue());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Name: " + newCompany.getTitle() + " Rate: " + newCompany.getRate());
+            companies.add(newCompany);
             companyCountInThePage++;
             //System.out.println(companyTitleAndRate);
-           // System.out.println("Name: " + companyTitle + " Rate: " + companyRate);
-            companies.add(newCompany);
+            // System.out.println("Name: " + companyTitle + " Rate: " + companyRate);
         }
 
         return companyCountInThePage;
     }
 
-    public static String getNextURL(Integer pageNumber){
+    public static String getNextURL(Integer pageNumber) {
         // Example URL's for pages after the first page;
         // https://www.glassdoor.com/Reviews/istanbul-reviews-SRCH_IL.0,8_IM1160_IP2.htm
         // https://www.glassdoor.com/Reviews/istanbul-reviews-SRCH_IL.0,8_IM1160_IP3.htm
@@ -106,7 +109,7 @@ public class GlassdoorScraper implements CommandLineRunner{
         return nextURL;
     }
 
-    public static Integer getPageNumber(Integer i){
+    public static Integer getPageNumber(Integer i) {
         Integer pageNumber = (int) (i / 10);
         System.out.print("Page " + pageNumber + " ");
 
@@ -116,13 +119,21 @@ public class GlassdoorScraper implements CommandLineRunner{
     // Glassdoor mixes company logo section with title section for companies without logo.
     // For example, if company name is Amazon if it's logo is not added then title is catched like this: Amazon Logo Amazon
     // So here we check for duplicate then extract the company name, i.e, Amazon
-    public static String duplicateCheck(String companyTitle){
+    public static String duplicateCheck(String companyTitle) {
         Boolean isDuplicate = companyTitle.contains("Logo");
-        if(isDuplicate){
-            String [] splitCompanyTitle = companyTitle.split("(Logo)");
-            if(splitCompanyTitle[0].trim().equals(splitCompanyTitle[1].trim()))
+        if (isDuplicate) {
+            String[] splitCompanyTitle = companyTitle.split("(Logo)");
+            if (splitCompanyTitle[0].trim().equals(splitCompanyTitle[1].trim()))
                 return splitCompanyTitle[0];
         }
         return companyTitle;
     }
+
+    public static void sortAllCompanies() {
+        //companies.sort(Comparator.comparing(Company::getRate));
+
+        //Collections.sort(companies, (s1, s2) -> s2.getRate().compareTo(s1.getRate()));
+       // System.out.println("sorting is done");
+    }
+
 }
