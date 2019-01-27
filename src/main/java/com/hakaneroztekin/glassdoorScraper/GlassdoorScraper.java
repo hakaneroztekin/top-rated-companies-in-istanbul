@@ -46,7 +46,7 @@ public class GlassdoorScraper implements CommandLineRunner {
             //System.out.println(totalCompanyCount);
 
             // So that we know the total # of the companies, so we can iterate till we reach that count
-            while (parsedCompaniesCount <= 30) {
+            while (parsedCompaniesCount <= totalCompanyCount) {
                 URL = getNextURL(getPageNumber(parsedCompaniesCount));
                 userAgent.visit(URL);  //visit a url
                 totalCompaniesInThePage = scrapeCompanies(userAgent);
