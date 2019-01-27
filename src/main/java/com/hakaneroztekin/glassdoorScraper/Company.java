@@ -6,9 +6,16 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class Company {
+public class Company implements Comparable<Company> {
     String title;
     Double rate;
 
+    @Override
+    public int compareTo(Company otherCompany) {
+        if (rate == null || otherCompany.getRate() == null) {
+            return 0;
+        }
+        return getRate().compareTo(otherCompany.getRate());
+    }
 
 }

@@ -90,7 +90,7 @@ public class GlassdoorScraper implements CommandLineRunner {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            System.out.println("Name: " + newCompany.getTitle() + " Rate: " + newCompany.getRate());
+            //System.out.println("Name: " + newCompany.getTitle() + " Rate: " + newCompany.getRate());
             companies.add(newCompany);
             companyCountInThePage++;
             //System.out.println(companyTitleAndRate);
@@ -112,7 +112,6 @@ public class GlassdoorScraper implements CommandLineRunner {
     public static Integer getPageNumber(Integer i) {
         Integer pageNumber = (int) (i / 10);
         System.out.print("Page " + pageNumber + " ");
-
         return pageNumber;
     }
 
@@ -130,10 +129,10 @@ public class GlassdoorScraper implements CommandLineRunner {
     }
 
     public static void sortAllCompanies() {
-        //companies.sort(Comparator.comparing(Company::getRate));
-
-        //Collections.sort(companies, (s1, s2) -> s2.getRate().compareTo(s1.getRate()));
-       // System.out.println("sorting is done");
+        Collections.sort(companies); // sort company rates in ascending order
+        Collections.reverse(companies); // reverse it to descending order
+        System.out.println("Sorting is done");
+        System.out.println(companies);
     }
 
 }
