@@ -52,7 +52,10 @@ public class GlassdoorScraper implements CommandLineRunner {
                 System.out.print("Completed!\n");
             }
             System.out.println("Scraping completed. Now companies will be sorted");
+
             sortAllCompanies();
+            filterAndPrint();
+
         } catch (JauntException e) {         //if an HTTP/connection error occurs, handle JauntException.
             System.err.println(e);
         } catch (ParseException e) {
@@ -137,7 +140,6 @@ public class GlassdoorScraper implements CommandLineRunner {
         Collections.sort(companies); // sort company rates in ascending order
         Collections.reverse(companies); // reverse it to descending order
         System.out.println("Sorting is done");
-        System.out.println(companies);
     }
 
     public static Double processAndConvertToDouble(String s){
@@ -154,5 +156,19 @@ public class GlassdoorScraper implements CommandLineRunner {
         }
 
         return s_double;
+    }
+
+    public static void filterAndPrint(){
+        // We'll filter out companies with low ratings and seperate highest rated companies with low number of reviews
+        // Thus, we get highest rated companies with somehow abundant review counts
+        Integer counter = 1;
+        System.out.println("##" + "\t" + "Title" + "\t" + "Rate" + "\t" + "Total Reviews");
+        for(Company company : companies){
+            if(company.getRate() >= 2.9 && company.getReviewCount() > 20){
+
+                System.out.println("#" + counter + "\t" + company.getTitle() + "\t" + company.getRate() + "\t\t" + company.getReviewCount() + "\n");
+                counter++;
+            }
+        }
     }
 }
