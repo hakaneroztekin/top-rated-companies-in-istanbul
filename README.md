@@ -1,4 +1,5 @@
-# filter-glassdoor-ratings
+# Top Rated Companies
+> **Update**: A newer version if this app is here: https://github.com/hakaneroztekin/glassdoor-top-rated-scraper-javascript
 Ever wonder the top 100 rated companies in Istanbul in Glassdoor?
 
 Glasdoor is a great source to learn about the companies. Though, it does not sort best companies based on their ratings. This simple app provides an exemplary sort for best companies in Istanbul.
